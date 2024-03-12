@@ -98,7 +98,7 @@ rule samtools:
         disk_mb=128000,
     shell:
         """
-        samtools view {input} -h -q {params.mapq} -F 4 -F 256 -F 1024 -F 2048 -@ {threads} -b > {output.bam} 2> {log.q60};
+        samtools view {input} -h -q {params.mapq} -F 4 -F 1024 -F 2048 -@ {threads} -b > {output.bam} 2> {log.q60};
         samtools sort {output.bam} > {output.bam_sorted} 2> {log.sort};
         samtools index -@ {threads} {output.bam_sorted} 2> {log.index};
         samtools stats {output.bam_sorted} > {output.bam60stats} 2> {log.stats};    
