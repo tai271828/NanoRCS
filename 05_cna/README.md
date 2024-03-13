@@ -20,6 +20,12 @@ subclonal status. For NanoRCS CNA inference, we use customized PoN. For NovaSeq 
 
 More documentation of ichorCNA please be referred to: https://github.com/broadinstitute/ichorCNA
 
+## Downstream analysis: IchorCNA provide multiple solutions especially with allowing high-ploidy solutions 
+and subclonal solutions. Sometimes manual curation is important to get the most likely true copy number profiles. 
+For samples with known CNA and ploidy in the tumor tissue, we manually select the highest scoring solution with fitting 
+ploidy. Exporting the output of the selected solution is done via R studio.  
+
 ### Output: 
 
-Downstream plotting takes path relative to ichorCNA output directory `out_path` defined in the config files.
+Downstream plotting scripts are located in `10_figures`. Scripts refer to ichorCNA output path relative 
+`/path/to/NanoRCS/output/processed_data/05_cna/ichorCNA_curated_solution/`.
