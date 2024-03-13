@@ -5,7 +5,7 @@ Here you can find `ichorCNA` cloned as a submodule with small adaptation in the 
 
 The adaptations are listed below:
 - Allow absolute output path location instead of relative path originally
-- include conda environment automatically install by snakemake pipeline in envs folder
+- Include conda environment automatically install by snakemake pipeline in envs folder
 - Resourses udpate 
 
 ichorCNA is included as a submodule in this repository. The code difference can be found with git diff to the original 
@@ -21,6 +21,5 @@ subclonal status. For NanoRCS CNA inference, we use customized PoN. For NovaSeq 
 More documentation of ichorCNA please be referred to: https://github.com/broadinstitute/ichorCNA
 
 ### Output: 
-
 
 Downstream plotting takes path relative to ichorCNA output directory `out_path` defined in the config files.
