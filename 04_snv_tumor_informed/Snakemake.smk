@@ -289,6 +289,6 @@ rule plot_raw_snv:
         paths_to_other_figures = opj(config["out_dir"],"figure2/"),
     shell:
         """
-        python scripts/plot_raw_snv_for_PDF.py -f {output.figure_raw} -p {params.paths_to_other_figures} -v {input.vcf_pickle} \
+        python scripts/plot_raw_snv.py -f {output.figure_raw} -p {params.paths_to_other_figures} -v {input.vcf_pickle} \
          {input.snv_pickle} {input.healthy_pickles}
         """
