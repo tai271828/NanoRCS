@@ -10,8 +10,6 @@ from datetime import datetime
 import matplotlib.dates as md
 import numpy as np
 
-
-
 plt.rcParams['pdf.fonttype'] = 42
 plt.rcParams['mathtext.rm'] = 'Arial'
 plt.rcParams['font.family'] = ['Arial']
@@ -27,41 +25,6 @@ plt.rc('xtick', labelsize=MEDIUM_SIZE)    # fontsize of the tick labels
 plt.rc('ytick', labelsize=BIGGER_SIZE)    # fontsize of the tick labels
 plt.rc('legend', fontsize=MEDIUM_SIZE)    # legend fontsize
 plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
-
-#
-# def combine_snv(df, outpath, tumor_sample):
-#     bin_size = 60
-#     bins = range(-bin_size, 3600 + bin_size, bin_size)
-#     palette_A = {
-#         'OVCA01': 'darkred',
-#         'OES01': 'darkred',
-#         'OES02': 'darkred',
-#         'HC01': 'grey',
-#         'HC02': 'grey',
-#         'HC03': 'grey'
-#     }
-#     fg = sns.catplot(x='time_bin',
-#                      y='ratio',
-#                      data=df,
-#                      hue='sample',
-#                      aspect=4 / 2,
-#                      kind='point',
-#                      palette=palette_A, )
-#     locs, _ = plt.xticks()  # Get current x-tick locations
-#
-#     minutes = np.array(list(bins)[1:]) / 60
-#     every_x = 5
-#     step = 0.05
-#     # plt.yticks(ticks=np.arange(0, 1 + step, step))
-#     plt.ylabel('ALT allele fraction')
-#     plt.xlabel('Sequencing duration (minute)')
-#     plt.xticks(locs[::every_x], labels=minutes[::every_x])  # Set x-tick locations to every 10th tick
-#     plt.tight_layout()
-#     plt.savefig(f"{outpath}/{tumor_sample}_snv_overtime_not_fix_y.png", dpi = 300)
-#     plt.savefig(f"{outpath}/{tumor_sample}_snv_overtime_not_fix_y.pdf", dpi = 300)
-#     print("Figure saved to:", f"{outpath}/{tumor_sample}_snv_overtime.pdf")
-#     plt.show()
-
 
 def combine_snv_w_background(df, outpath, tumor_sample, every_x=5):
     fig, ax1 = plt.subplots(figsize=( 7.20472/2, 7.20472/4 ))
