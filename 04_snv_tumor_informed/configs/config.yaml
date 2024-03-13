@@ -1,7 +1,7 @@
 # Config file for Snakemake workflow
 
 # Define the output directory
-out_dir: "/path/to/folder"
+out_dir: "/path/to/NanoRCS/output/processed_data/04_snv_tumor_informed/"
 
 # Rule specific params:
 min_qual: [40]

@@ -282,9 +282,6 @@ rule plot_raw_snv:
 
     output:
         figure_raw = opj(config["out_dir"], "figure2/{sample}_raw_snv_{min_qual}.pdf"),
-        # figure_bar= opj(config["out_dir"],"figure2/{sample}_snv_summary_{min_qual}.pdf"),
-        # figure_found_vaf= opj(config["out_dir"],"figure2/{sample}_{vcf}_tumor_vaf_after_adjust_{min_qual}.pdf"),
-        # figure_vaf= opj(config["out_dir"],"figure2/{sample}_{vcf}_tumor_vaf_after_adjust_{min_qual}.pdf"),
     params:
         paths_to_other_figures = opj(config["out_dir"],"figure2/"),
     shell:
