@@ -25,6 +25,13 @@ Different parts of analyses are organized in different folders on this top folde
 
 The repository is still under construction for section 04-07. Please contact the authors for more details.
 
+# Getting started:
+
+1. Clone this repository by `git clone --recurse-submodules <address of this repo>` to include submodule ichorCNA 
+and customized adaptation.
+2. Install `nextflow` and `snakemake` and `R` in your environment. 
+3. Further dependencies are described in each folder in this repository separately. 
+
 # Repository content
 ## Pre-processing
 ### 00_preprocessing_tumor_vcf
