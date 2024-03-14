@@ -19,7 +19,7 @@ Pan-Cancer Analysis of Whole Genomes (PCAWG, https://dcc.icgc.org/pcawg). PCAWG 
   - technique specific sequencing throughput
   - genome length 
 
-## Main
+## Main execution steps
 
 1. Variant calling on PCAWG patients with variant calling tool "PURPLE". Produces `${Patient_ID}.purple.somatic.postprocessed.vcf.gz`
 2. Execute `scripts/vcf_filter.py` to keep single-base, PASS variants. 
@@ -27,6 +27,6 @@ Pan-Cancer Analysis of Whole Genomes (PCAWG, https://dcc.icgc.org/pcawg). PCAWG 
 4. Execute `Snakemake-cfdetect.smk` with `config/config_YOURS.yaml` to receive detection rate per tumor fraction.
    - Output `/path/to/NanoRCS/output/processed_output/07_PCAWG_TF_limit_of_detection/combined/${TUMORTYPE}_combined.pickle.gz.csv`
 
-## Plotting
+## Output plotting
 1. Determining reliable lowest TF detection in Fig5E and SupplFig9D: `Fig5E_SupplFig9D_v1.3.R`
 2. Distribution of number of mutation in patient group `SupplFig9BC_Esophagus-cancer_PCAWG.csv`, `SupplFig9BC_Ovarian-cancer_PCAWG.csv`

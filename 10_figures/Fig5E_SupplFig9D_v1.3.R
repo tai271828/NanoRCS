@@ -10,11 +10,11 @@
 
 #1 Directories
 #1A Main directory
-dir = "~/surfdrive/Shared/Cyclomics_shared/Genome_Wide_Cyclomics/"
+output_dir = "/path/to/NanoRCS/output/output_figures/"
 #1B Input
-indir = paste(dir,"Upload/Data/",sep="")
+indir = "/path/to/NanoRCS/output/processed_output/07_PCAWG_TF_limit_of_detection/combined/"
 #1C Output
-outdir = paste(dir,"Figures/Suppl Fig 9/raw/",sep="")
+outdir = paste(output_dir,"Suppl Fig 9/raw/",sep="")
 
 #2 Libraries
 library(ggplot2) #Version: ‘3.4.0’
